@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Carousel from "./components/Carousel";
+import { Screen, Title } from "./styles";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Screen>
+      <Carousel
+        itemStyle={{
+          width: 300,
+          height: 500,
+          colorBase: "tomato",
+        }}
+        images={[
+          "https://conteudo.imguol.com.br/c/entretenimento/16/2017/06/27/naruto-1498593686428_v2_4x3.png",
+          "https://s.aficionados.com.br/imagens/kakashi-3_cke.jpg",
+          "https://s.aficionados.com.br/imagens/sasuke-0_cke.jpg",
+          "https://dicadadiversao.com.br/wp-content/uploads/narutoa.jpg",
+          "https://s.aficionados.com.br/imagens/jiraya-0.jpg",
+        ]}
+      ></Carousel>
+    </Screen>
   );
 }
 
