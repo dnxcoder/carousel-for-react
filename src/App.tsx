@@ -12,11 +12,11 @@ function App() {
           colorBase: "tomato",
         }}
         images={[
-          "https://conteudo.imguol.com.br/c/entretenimento/16/2017/06/27/naruto-1498593686428_v2_4x3.png",
-          "https://s.aficionados.com.br/imagens/kakashi-3_cke.jpg",
-          "https://s.aficionados.com.br/imagens/sasuke-0_cke.jpg",
-          "https://dicadadiversao.com.br/wp-content/uploads/narutoa.jpg",
-          "https://s.aficionados.com.br/imagens/jiraya-0.jpg",
+          "https://images.pexels.com/photos/3226586/pexels-photo-3226586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+          "https://images.pexels.com/photos/4450115/pexels-photo-4450115.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+          "https://images.pexels.com/photos/8487441/pexels-photo-8487441.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+          "https://images.pexels.com/photos/9210494/pexels-photo-9210494.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          "https://images.pexels.com/photos/8193431/pexels-photo-8193431.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         ]}
       ></Carousel>
     </Screen>
