@@ -8,6 +8,7 @@ background-color: turquoise;
 display: flex;
 flex-direction: column;
 justify-content: center;
+overflow: hidden;
 `;
 
 export const Title = styled.h1`

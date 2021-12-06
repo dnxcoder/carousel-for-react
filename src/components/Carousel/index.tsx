@@ -11,7 +11,6 @@ import {
   RightButton,
 } from "./styles";
 import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
-import { RiCheckboxBlankCircleFill } from "react-icons/ri";
 
 interface carouselProps {
   itemStyle: {
@@ -30,8 +29,6 @@ const Carousel: React.FC<carouselProps> = ({ images, itemStyle }) => {
   const [indexActive, setIndexActive] = useState(middleItem);
 
   const handleMoveToRight = useCallback(() => {
-    console.log(carouselPosition);
-
     if (indexActive < images.length) {
       setCarouselPosition((oldState) => {
         const newPosition = oldState - itemStyle.width;
@@ -71,7 +68,10 @@ const Carousel: React.FC<carouselProps> = ({ images, itemStyle }) => {
 
   return (
     <Container>
-      <AnimatedContainer moveX={carouselPosition}>
+      <AnimatedContainer
+        moveX={carouselPosition}
+        totalWidth={itemStyle.width * images.length}
+      >
         {images.map((item, index) => {
           return (
             <ItemContainer

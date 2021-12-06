@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { FaChevronCircleLeft } from "react-icons/fa";
 
 interface itemProps {
   width: number;
@@ -14,6 +13,7 @@ interface imageProps {
 
 interface AnimatedContainerProps {
   moveX: number;
+  totalWidth:number;
 }
 
 interface ActiveDot {
@@ -23,21 +23,21 @@ interface ActiveDot {
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
   height: auto;
   position: relative;
+  width: 100%;
+  align-items: center;
+  
 `;
 
 export const AnimatedContainer = styled.div<AnimatedContainerProps>`
-  width: 100%;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: ${(props)=> `${props.totalWidth}px`};
   transform: ${(props) => `translateX(${props.moveX}px)`};
   transition: 0.5s ease-out;
-  
-  
-  
 `;
 
 export const ItemContainer = styled.div<itemProps>`
@@ -54,7 +54,6 @@ export const ItemContainer = styled.div<itemProps>`
   margin-left: 20px;
   margin-right: 20px;
   cursor: pointer;
-  
 
   ::before {
     content: "";
@@ -76,7 +75,6 @@ export const Image = styled.div<imageProps>`
   background-image: ${(props) => `url(${props.backgroundURL})`};
   background-size: cover;
   background-position: center;
- 
 `;
 
 export const LeftButton = styled.div`
@@ -96,21 +94,21 @@ export const RightButton = styled.div`
 `;
 
 export const DotsContainer = styled.div`
-width: 100%;
-display: flex;
-flex-direction: row;
-margin-top: 25px;
-justify-content: center;
-align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Dot = styled.div<ActiveDot>`
-margin-left: 10px;
-margin-left: 10px;
-cursor: pointer;
-border-radius: 50px;
-width: ${(props)=> props.active ? `20px` : `10px`};
-height: ${(props)=> props.active ? `20px` : `10px`};
-background-color: tomato;
-transition: 0.5s ease-out;
+  margin-left: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 50px;
+  width: ${(props) => (props.active ? `20px` : `10px`)};
+  height: ${(props) => (props.active ? `20px` : `10px`)};
+  background-color: tomato;
+  transition: 0.5s ease-out;
 `;
