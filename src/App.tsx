@@ -7,7 +7,7 @@ function App() {
     <Screen>
       <Carousel
         itemStyle={{
-          width: 300,
+          width: 400,
           height: 500,
           colorBase: "tomato",
         }}
